@@ -1,0 +1,1596 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,800;0,900;1,300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; /* makes 1rem 10px */
+}
+body {
+  font-size: 1.4rem; /* default font of 14px */
+  font-family: "Verdana", "Arial", sans-serif;
+  line-height: 1.3;
+  color: #ffffff;
+}
+/* fonts */
+
+/* Nav Container Base Styles */
+.nav-container {
+  padding: 1.5rem 13.9rem;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+/* Inner Container with Flexbox */
+.nav-inner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+/* Logo */
+.logos {
+  flex-shrink: 0;
+}
+
+.logos img {
+  height: auto;
+  width: 100%;
+  max-width: 313px;
+}
+
+/* Contact Info */
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  flex-wrap: nowrap;
+}
+
+/* Phone Text */
+.phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+  color: #00408d;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.phone-link{
+  text-decoration: none;
+  color: #00408D;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  height: 4.8rem;
+  padding: 0 1.5rem;
+  font-size: 1.5rem;
+  background: #4caf50;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  color: #ffffff;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.whatsapp-btn img {
+  height: auto;
+  width: 23px;
+  margin-right: 0.8rem;
+}
+
+/* Apply Button */
+.apply-btn {
+  width: 16rem;
+  height: 4.8rem;
+  background: #ffd11a;
+  border-radius: 0.4rem;
+  color: #ffffff;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.contact-info-mobile {
+  display: none;
+}
+
+/* General button styling */
+button {
+  display: inline-block; /* Ensures buttons behave like boxes */
+  border: none;
+  font-size: 1.5rem; /* Relative font size */
+  line-height: 1.3;
+  padding: 1.4rem 1.6rem; /* Consistent padding for both buttons */
+  width: 18.8rem; /* Fixed width for same size */
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.whatsapp-btn:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+.apply-btn:hover {
+  background-color: #ffd11ac8;
+}
+
+/* Form Container */
+.form-container {
+  background-color: #fff;
+  width: 85%;
+  height: 100%; /* Adjust width as needed */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1rem;
+}
+
+/* Header Section */
+.form-header {
+  background: #1f1f1f 0% 0% no-repeat padding-box;
+  border-radius: 6px 6px 0px 0px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.form-header > *:nth-child(1) {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+.form-header > *:nth-child(2) {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 1.5rem;
+  align-items: center;
+}
+
+form select {
+  padding: 0.75rem;
+  font-weight: 400;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  outline: none;
+  width: 100%;
+  height: 3.8rem;
+  transition: border-color 0.3s ease;
+  background: #f6f6f6 0% 0% no-repeat padding-box;
+}
+
+form.active{
+  gap: 0.6rem;
+}
+
+form span{
+  width: 100%;
+}
+
+/* form button {
+  margin-top: 0rem;
+} */
+
+.form-input-dummy{
+  padding: 0.75rem;
+  font-weight: 400;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  outline: none;
+  width: 100%;
+  height: 3.8rem;
+  transition: border-color 0.3s ease;
+  background: #f6f6f6 0% 0% no-repeat padding-box;
+}
+
+.form-input {
+  padding: 0.75rem;
+  font-weight: 400;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  outline: none;
+  width: 100%;
+  height: 3.8rem;
+  transition: border-color 0.3s ease;
+  background: #f6f6f6 0% 0% no-repeat padding-box;
+}
+
+.form-input:focus {
+  border-color: #ff6a00;
+}
+
+.error-message.active {
+  color: #ff4d4d;
+  font-size: 12px;
+  margin-bottom: 0px;
+  min-height: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  z-index: 99;
+}
+
+.form-input.error {
+  border-color: #ff4d4d;
+}
+
+.hero-section {
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  min-height: 475px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.6rem 0rem;
+}
+
+.hero-bg-image {
+  top: 0;
+  left: 0;
+  position: absolute;   
+  z-index: 1;
+  background-image: url("../images/bg-slide-img-2.jpg");
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center center; /* Centers the image both vertically and horizontally */
+  height: 65%;
+  width: 100%;
+}
+
+.hero-child {
+  width: 108.7rem;
+  height: 52.9rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.hero-child > *:nth-child(1) {
+  height: 100%;
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hero-child > *:nth-child(2) {
+  display: flex;
+  margin-right: 1.5rem;
+  height: 100%;
+  width: 353px;
+  justify-content: flex-end;
+}
+
+.statisfy-h1 {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 6.5rem;
+  color: #ffd11a;
+}
+
+.kefa-h1 {
+  font-size: 5.2rem;
+  color: #ffd11a;
+}
+
+.kefa-h2 {
+  font-size: 3.5rem;
+  color: #ffffff;
+}
+
+.course-container {
+  border: 0.1rem solid #ffd11a;
+  border-radius: 0.4rem;
+  opacity: 1;
+  padding: 0.6rem;
+  font-size: 2.2rem;
+  color: #ffffff;
+
+}
+
+.course-container span{
+  padding: 0rem 0.5rem;
+}
+
+
+
+.achivement-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.achivement-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 21rem;
+  height: 7.2rem;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 20px 20px 40px #00000029;
+  border-radius: 8px;
+  margin-right: 2rem;
+}
+
+.achivement-child img {
+  margin-right: 0.86rem;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #404040;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #404040;
+}
+
+.perks-container {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.8rem 1.3rem;
+  background: #334080 0% 0% no-repeat padding-box;
+  border-radius: 0.8rem;
+  margin-top: 3.5rem;
+}
+
+.perk-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.perk-child span p:first-child {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+/* Styling the second <p> */
+.perk-child span p:nth-child(2) {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 475px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.6rem 1rem;
+}
+
+.hero-bg-image {
+  top: 0;
+  left: 0;
+  position: absolute;   
+  z-index: 1;
+  background-image: url("../images/bg-slide-img-2.jpg");
+  height: 65%;
+  width: 100%;
+}
+
+.hero-child {
+  width: 100%;
+  max-width: 108.7rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  padding: 0 1rem;
+}
+
+/* Large Screen Layout */
+.hero-child > *:nth-child(1) {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hero-child > *:nth-child(2) {
+  width: 40%;
+}
+
+.degree-section {
+  padding: 4.6rem 0rem 3.8rem 13.9rem !important;
+  background-color: #f0f0f0;
+  width: 100%;
+}
+
+.header-1 {
+  color: #334080;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+
+.admission-process-header {
+  text-align: center;
+}
+
+.sub-header {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin-top: -5rem;
+}
+.degree-cards {
+  margin-top: 3.3rem;
+  display: flex;
+  gap: 3.3rem;
+  overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.degree-cards::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for Chrome/Safari/Edge */
+}
+
+.degree-card {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0rem 0.3rem 2rem #00000029;
+  padding: 2.1rem 0rem 0rem 2.2rem;
+  border-radius: 0.4rem;
+  min-height: 400px;
+  min-width: 410px;
+  position: relative;
+}
+
+.degree-card:hover,.degree-card.active { 
+  background: transparent url("../images/BBADegree.jpg") 0% 0% no-repeat;
+  background-size: cover;
+}
+.degree-card:hover .card-headers ,.degree-card:hover .card-headers p ,.degree-card:hover .card-content p,
+.degree-card.active .card-headers ,.degree-card.active .card-headers p ,.degree-card.active .card-content p {
+  color: #fff;
+ }
+
+ .degree-card:hover .card-btn-secondary,
+ .degree-card.active .card-btn-secondary{
+  background-color: #fff;
+  color: #000 !important;
+ }
+
+
+.card-headers {
+  width: 100%;
+  font-size: 2.6rem;
+}
+
+.card-headers p {
+  color: #1f1f1f;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.card-content {
+  width: 80%;
+}
+
+.card-content p {
+  color: #1f1f1f;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.card-btns {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  justify-self: flex-end;
+  width: 80%;
+  position: absolute;
+  bottom: 10%;
+}
+
+.card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0rem;
+  font-size: 1.4rem;
+  border-radius: 0.4rem;
+}
+
+.card-btn-primary {
+  background-color: #ffd11a;
+  color: #ffff;
+}
+
+.card-btn-secondary {
+  color: #ffffff;
+  background-color: #334080;
+  font-size: 1.4rem;
+}
+
+.hidden-download-link {
+  display: none;
+}
+
+.card-content > *:nth-child(1) {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-content > *:nth-child(1) {
+  font-size: 1.6rem;
+}
+
+.slider-btn-container {
+  margin-top: 2.8rem;
+  display: flex;
+  gap: 1.9rem;
+}
+
+.back-btn,
+.next-btn {
+  background: transparent;
+  border: 0.1rem solid #ffd11a;
+  width: 4.4rem;
+  height: 4.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.back-btn {
+  border: 0.1rem solid #747474;
+}
+
+.back-btn:hover,
+.next-btn:hover {
+  transform: scale(1.1);
+}
+
+.back-btn svg,
+.next-btn svg {
+  width: 26px;
+  height: 26px;
+  stroke: #333;
+}
+
+/* Add a wrapper for both containers */
+.admission-process-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  -webkit-overflow-scrolling: touch;
+  padding: 2rem 4rem;
+}
+
+.admission-process-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Inner content container to maintain width */
+.admission-process-inner {
+  display: flex;
+  flex-direction: column;
+  min-width: max-content;
+  gap: 2rem;
+}
+
+/* Update the stepper container */
+.steps-containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  margin-top: 3.4rem;
+  width: 100%;
+}
+
+.step {
+  width: 160px;
+  height: 160px;
+  padding: 20px;
+  text-align: center;
+  border: 2px dashed #747474;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step::before {
+  content: "";
+  display: block;
+  width: 8rem;
+  height: 2px;
+  border-top: 2px dashed #747474;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+
+  z-index: 1;
+}
+
+.step:last-child::before {
+  display: none;
+}
+
+.stepper-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-shadow: 0px 5px 20px #00000029;
+}
+
+.stepper-icon img {
+  height: 6rem;
+  width: 6rem;
+}
+
+.mr-l-10{
+  margin-left: 1rem;
+}
+
+.icon {
+  font-size: 24px;
+  color: #ff6b6b;
+  margin-bottom: 10px;
+}
+
+.admission-process-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-bottom: 5rem;
+}
+
+.admission-content-card {
+  width: 195px;
+  height: 87px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 20px #00000029;
+  border-radius: 4px;
+  margin-top: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Responsive styles */
+/* @media screen and (max-width: 768px) {
+  .admission-process-wrapper {
+    padding: 1rem;
+  }
+
+  .container {
+    gap: 4rem;
+  }
+
+  .admission-process-container {
+    gap: 3rem;
+  }
+} */
+
+.admission-content-card p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #1f1f1f;
+  text-align: center;
+}
+
+.admission-content-card h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #1f1f1f;
+  text-align: center;
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media screen and (max-width: 1024px) {
+  .nav-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  /* .hero-bg-image {
+    height: 35%;
+  } */
+
+  /* .hero-child > *:nth-child(1),
+  .hero-child > *:nth-child(2) {
+    width: 100%;
+    max-width: 500px;
+    margin: 1rem 0;
+  } */
+}
+
+.features-section {
+  width: 100%;
+  display: flex;
+  padding-top: 4.2rem;
+  padding-left: 13.9rem;
+  padding-bottom: 4rem;
+  flex-direction: column;
+}
+
+.features-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%;
+  margin: 2.6rem 0rem;
+  overflow-x: auto; /* Enable horizontal scroll */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  scrollbar-width: none;
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none; /* For Safari */
+  -ms-user-select: none; /* For IE/Edge */
+}
+
+.feature {
+  flex: 0 0 26rem;
+  min-width: 20rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 28rem;
+  height: 28.2rem;
+  text-align: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature-content {
+  margin: 0rem 1.3rem;
+}
+
+/* .feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+} */
+
+.feature-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.feature-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #334080;
+}
+
+.feature-description {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Curriculum Section */
+.curriculum-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 34.9rem;
+  padding-left: 13.9rem;
+  padding-top: 3.2rem; 
+  background-image: url('../images/homepage-bg-a1.jpg');
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center center;
+}
+
+.curriculum-content {
+  flex: 1 1 50%;
+  color: #fff;
+  max-width: 600px;
+}
+
+.curriculum-content h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin-bottom: 3.4rem;
+  line-height: 1.3;
+}
+
+.curriculum-content .highlight {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.curriculum-points {
+  list-style: none;
+}
+
+.curriculum-points li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.curriculum-points .bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 2.3rem;
+  background-color: #fff;
+}
+
+.curriculum-points strong {
+  font-weight: 600;
+}
+
+
+
+
+.admission-process-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding-top: 3.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .curriculum-section {
+    padding-top: 2.9rem;
+    padding-left: 1.7rem;
+    align-items: flex-start;
+    background-image: none;
+    background-color: #fe6809;
+    flex-direction: column;  
+   background-image: url('../images/homepage-mobile-bg-a.jpg');
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center center;
+  }
+
+  .curriculum-content,
+  .curriculum-image {
+    flex: 1 1 100%;
+  }
+
+  .curriculum-content {
+    margin-bottom: 30px;
+  }
+
+  .curriculum-mobile-bg {
+    width: 100%;
+    min-height: auto;  
+    background-image: url('../images/curriculumDesktop.jpg');
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: right center;
+  }
+}
+
+@media (max-width: 768px) {
+  .curriculum-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .curriculum-content h2 {
+    font-size: 1.5rem;
+  }
+  .feature{
+    width: 31rem;
+    height: 31.5rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media screen and (max-width: 480px) {
+  .statisfy-h1 {
+    font-size: 4.5rem;
+  }
+
+  .kefa-h1,
+  .kefa-h2 {
+    font-size: 3rem;
+  }
+
+  .form-container {
+    width: 85%;
+    padding: 0.5rem;
+  }
+}
+
+.top-recruit-section {
+  margin-top: 7.1rem;
+  background-color: #f0f0f0;
+  padding-top: 3.8rem;
+  padding-left: 13.9rem;
+  padding-bottom: 7.8rem;
+}
+.top-recruit-logo-container {
+  display: flex;
+  margin-top: 2.4rem;
+  margin-left: -3rem;
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none; /* For Safari */
+  -ms-user-select: none; /* For IE/Edge */
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.top-recruit-logo-container img {
+  pointer-events: none;
+}
+
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-section h2 {
+  margin-top: 3.72rem;
+  margin-bottom: 1.4rem;
+}
+
+.accordion-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.accordion-container > .accordion-item:last-child {
+  margin-bottom: 44.43px;
+}
+
+.accordion-item {
+  margin-bottom: 2.4rem;
+  background: #f0f0f0 0% 0% no-repeat padding-box;
+}
+
+.accordion-header {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #212121;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.accordion-content {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.accordion-item.active {
+  box-shadow: 0px 3px 15px #00000029;
+}
+
+.accordion-item.active .accordion-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #989898;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 200px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.accordion-header::after {
+  content: "+";
+  font-size: 20px;
+  color: #666;
+}
+
+.accordion-item.active .accordion-header::after {
+  content: "-";
+}
+
+.accordion-content p {
+  margin: 0;
+  color: #292929;
+  line-height: 1.5;
+}
+
+.footer-section {
+  width: 100%;
+  height: 48px;
+  background-color: #fe6809;
+}
+
+/* Base responsive styles */
+@media screen and (max-width: 1024px) {
+  .contact-info {
+    display: none;
+  }
+
+  .contact-info-mobile {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .logos {
+    flex-shrink: 1;
+  }
+
+  .logos img {
+    height: auto;
+    max-width: 180px;
+  }
+
+  .contact-info-mobile:hover {
+    cursor: pointer;
+  }
+
+  .hero-section {
+    padding: 0rem 0rem !important;
+  }
+
+  .hero-bg-image {
+    display: none;
+  }
+
+  .hero-child {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0px 0px;
+  }
+
+  .left-child {
+    position: relative;
+    width: 100% !important;
+    align-items: flex-start;
+    text-align: start;
+    gap: 3rem;
+    background-image: url("../images/bg-slide-img-2.jpg");
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center center; /* Centers the image both vertically and horizontally */
+    padding: 16px 16px;
+    z-index: 1;
+  }
+
+  .achivement-container {
+    position: absolute;
+    top: 101%;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 20px 16px;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  .achivement-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .achivement-child {
+    flex: 0 0 auto;
+    margin-right: 0;
+    min-width: 21rem;
+  }
+
+  .right-child {
+    margin-top: 12rem; /* Dynamic spacing */
+    width: 100% !important;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0px 3px 40px #00000029;
+  }
+
+  /* .achivement-container {
+    justify-content: center;
+    gap: 2rem;
+  } */
+
+  .achivement-child {
+    margin-right: 0;
+  }
+}
+label.error {
+  color: red;
+  font-size: 10px;
+  position: absolute;
+  width: 100%;
+  transition: all .5s; 
+}
+@media screen and (max-width: 768px) {
+  .left-child {
+    background-image: url("../images/heroMobileBg.jpg");
+  }
+
+  .degree-section {
+    padding: 4rem 2rem !important;
+  }
+
+  .degree-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .degree-card {
+    width: 100%;
+    min-width: 0px;
+    max-width: 500px;
+  }
+
+  .slider-btn-container {
+    display: none;
+  }
+
+  .perks-container {
+    width: 95%;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .perk-child span {
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  .statisfy-h1 {
+    font-size: 4.5rem;
+  }
+
+  .kefa-h1 {
+    font-size: 4rem;
+  }
+
+  .kefa-h2 {
+    font-size: 2.8rem;
+  }
+
+  /* .course-container {
+    font-size: 1.8rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  } */
+
+  /* .container {
+    flex-direction: column;
+    gap: 4rem;
+  } */
+
+  /* .step::before {
+    display: none;
+  } */
+
+  /* .admission-process-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .admission-content-card {
+    width: 100%;
+    max-width: 300px;
+  } */
+
+  .features-section {
+    padding-left: 1.8rem !important;
+  }
+
+  /* .feature {
+    min-width: 100%;
+  } */
+
+  .curriculum-section {
+    padding-top: 0;
+    padding-left: 0;
+    height: auto;
+  }
+
+  .curriculum-content {
+    padding-top: 2.9rem;
+    padding-left: 1.7rem;
+  }
+
+  .curriculum-points li {
+    /* Your styles here */
+    display: inline-block;
+  }
+  .curriculum-points .bullet {
+    /* Your styles here */
+    margin-right: 1rem;
+  }
+
+  /* TODO - CHANGES HERE */
+  .curriculum-mobile-bg {
+    width: 100%;
+    min-height: 35rem;
+    background-image: url("../images/homepage-mobile-bg-a.jpg");
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center center;
+  }
+
+  .top-recruit-section {
+    padding: 3rem 2rem !important;
+  }
+
+  .accordion-container {
+    width: 90%;
+  }
+
+  .faq-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .phone {
+    font-size: 1.2rem;
+  }
+
+  .whatsapp-btn,
+  .apply-btn {
+    font-size: 1.4rem;
+  }
+
+  .hero-bg-image {
+    height: 80%;
+  }
+
+  .form-header {
+    padding: 1rem;
+  }
+
+  .form-header > * {
+    font-size: 1.5rem !important;
+  }
+
+  .feature-title {
+    font-size: 1.6rem;
+  }
+
+  .feature-description {
+    font-size: 1.4rem;
+  }
+
+  .accordion-header {
+    font-size: 1.4rem;
+  }
+
+  .statisfy-h1 {
+    font-size: 3.8rem;
+  }
+
+  .kefa-h1 {
+    font-size: 3.4rem;
+  }
+
+  .kefa-h2 {
+    font-size: 2.8rem;
+  }
+
+  .course-container {
+    width: 85%;
+   display: flex;
+   flex-wrap: wrap;
+  }
+
+}
+
+/* Utility classes for responsive design */
+.hide-mobile {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hide-mobile {
+    display: block;
+  }
+}
+
+.center-mobile {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .center-mobile {
+    text-align: left;
+  }
+}
+
+.flex-mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .flex-mobile {
+    flex-direction: row;
+  }
+}
+
+/* Better mobile scrolling */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+.degree-cards,
+.features-container,
+.top-recruit-logo-container {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.degree-cards::-webkit-scrollbar,
+.features-container::-webkit-scrollbar,
+.top-recruit-logo-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Better touch targets for mobile */
+button,
+.whatsapp-btn,
+.accordion-header {
+  min-height: 44px; /* iOS minimum touch target size */
+}
+
+input {
+  font-size: 16px; /* Prevents iOS zoom on input focus */
+}
+
+/* Modal Base Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1000;
+}
+
+.modal-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Backdrop Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+/* Modal Content Styles */
+.modal-content {
+  position: relative;
+  background: #ffffff;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1001;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+/* Modal Header Styles */
+.modal-header {
+  padding: 2rem;
+  background: #fe6809;
+  color: #ffffff;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+/* Close Button Styles */
+.modal-close-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2.8rem;
+  cursor: pointer;
+  padding: 0;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Modal Body Styles */
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-body p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #1f1f1f;
+  margin-bottom: 2rem;
+}
+
+.eligibility-section {
+  margin: 2rem 0;
+}
+
+.eligibility-section h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #1f1f1f;
+  margin-bottom: 1rem;
+}
+
+/* Animation */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 2rem;
+  }
+
+  .modal-header h2 {
+    font-size: 2rem;
+  }
+
+  .modal-body p {
+    font-size: 1.3rem;
+  }
+}
+
+/* Button inherits your existing apply-btn styles */
+.modal-body .apply-btn {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+h2 {
+  font-size: revert;
+}
+
+.form-control {
+  padding: 8px 10px;
+}
+.modal-backdrop {
+  position: initial;
+  opacity: 0;
+}
